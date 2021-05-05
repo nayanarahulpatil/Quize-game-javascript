@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                /*josefin sans font then select and import*/
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: 300;
+            }
+            html
+            {
+                /*defalt size is 16 px but we want to make it 10px*/
+                font-size: 64.5%;
+            }
+            .main_div
+            {
+                width: 100vw;
+                min-height: 100vh;
+                display: grid;
+                place-items:center;
+                background-color: hsl(206, 94%, 92%);
+            }
+            .center
+            {
+                width: 50vw;
+                background-color:#fff ;
+                /*1rem=10px padding top bottom 3rem and left right 8rem*/
+                padding: 3rem 4rem;
+                border-radius: 1rem;
+                box-shadow: 0 1rem 1rem -0.7rem rgb(0, 0, 0, 0.4);
+
+            }
+            .center h2
+            {
+                font-size: 3rem;
+                font-weight: 300;
+                margin: 1rem 0 3rem  0;
+            }
+            .center li
+            {
+                font-size: 2rem;
+                margin-top: 1.5rem;
+               list-style: none;
+            }
+            input
+            {
+                cursor: pointer;
+            }
+            #SubmitAns, .btn
+            {
+                padding: 1rem 4rem;
+                outline: none;
+                margin: auto;
+                font-size: 2rem;
+                font-weight: 400;
+                display:block;
+                border: none;
+                color:#fff;
+                background-color:#74b9ff ;
+                text-transform: uppercase;
+                margin-top: 4rem;
+                cursor: pointer;
+            }
+            #scorecode .btn
+            {
+               margin-top: 2rem;
+               background-color: #55cbef;
+               color: #2d3436;
+                
+            }
+            #scorecode .btn:hover
+            {
+             background-color:#00b894; 
+             color: #fff;  
+            }
+            #scorecode h3
+            {
+                font-size: 3rem;
+                text-align: center;
+            }
+            #SubmitAns:hover
+            {
+                background-color: #0984e3;
+            }
+            #scorecode
+            {
+                background-color: #dfe6e9;
+                margin-top: 3rem;
+                padding: 3rem 4rem;
+                box-shadow: 0 1rem 1rem -0.7rem rgb(0,0,0,0.4);
+            }
+            .score
+            {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main_div">
+            <div class="center">
+                <h2 id="question">Questions comes here.</h2>
+                <ul style="list-style: none;">
+                    <li>
+                        <input type="radio" name="Answer" id="ans1" class="answer">
+                        <label id="option1">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Answer" id="ans2" class="answer">
+                        <label id="option2">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Answer" id="ans3" class="answer">
+                        <label id="option3">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="Answer" id="ans4" class="answer">
+                        <label id="option4">Answer</label>
+                    </li>
+                </ul>
+                <button id="SubmitAns">Submit</button>
+                <div id="scorecode" class="score">
+                 
+                </div>
+            </div>
+        </div>
+       <script src="quize.js"></script>
+    </body>
+</html>
